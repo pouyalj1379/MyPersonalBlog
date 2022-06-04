@@ -22,7 +22,7 @@ def home(request):
     templates = Template.objects.all()
 
     page = request.GET.get("story_page")
-    story_paginator = Paginator(stories, 1)
+    story_paginator = Paginator(stories, 5)
     story_objects_list = story_paginator.get_page(page)
 
     page_number = request.GET.get("page")
