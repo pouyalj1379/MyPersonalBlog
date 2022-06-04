@@ -53,7 +53,7 @@
                             {#                            <li data-menuanchor="Education"><a href="/l#Education">تحصیلات</a></li>#}
                             <li data-menuanchor="Poems"><a href="#Poems">اشعار</a></li>
                             <li data-menuanchor="Hobbies"><a href="#Hobbies">علاقه مندی ها</a></li>
-{#                            <li data-menuanchor="templates"><a href="#templates">قالب ها</a></li>#}
+                            {#                            <li data-menuanchor="templates"><a href="#templates">قالب ها</a></li>#}
                             <li data-menuanchor="Contact"><a href="#Contact">ارتباط</a></li>
                         </ul>
                     </nav>
@@ -100,7 +100,7 @@
             {#            <li data-menuanchor="Education"><a href="/#Education">تحصیلات</a></li>#}
             <li data-menuanchor="Poems"><a href="#Poems">اشعار</a></li>
             <li data-menuanchor="Hobbies"><a href="#Hobbies">علاقه مندی ها</a></li>
-{#            <li data-menuanchor="templates"><a href="#templates">قالب ها</a></li>#}
+            {#            <li data-menuanchor="templates"><a href="#templates">قالب ها</a></li>#}
             <li data-menuanchor="Contact"><a href="#Contact">ارتباط</a></li>
         </ul>
     </nav>
@@ -187,10 +187,6 @@
                              style="animation-delay:0s; animation-duration:700ms;">
 
 
-                            <audio id="1">
-                                <source src="{% static "Music/PersonalSiteBGMusic_1.mp3" %}" type="audio/mp3">
-                            </audio>
-
                             {#                            <audio id="2">#}
                             {#                                <source src="{% static "Music/PersonalSiteBGMusic_2.mp3" %}" type="audio/mp3">#}
                             {#                            </audio>#}
@@ -211,18 +207,6 @@
                             {#                                <source src="{% static "Music/PersonalSiteBGMusic_6.mp3" %}" type="audio/mp3">#}
                             {#                            </audio>#}
 
-
-                            <script>
-                                var x1 = document.getElementById("1");
-
-                                function playAudio_1() {
-                                    x1.play();
-                                }
-
-                                function pauseAudio_1() {
-                                    x1.pause();
-                                }
-                            </script>
 
                             {#                            <script>#}
                             {#                                var x2 = document.getElementById("2");#}
@@ -301,6 +285,31 @@
                             </li>
                             <li><img onclick="pauseAudio_1()" src="{% static "img/root/Pause_1.png" %}" alt="2">
                             </li>
+
+
+                            <audio id="1" autoplay="autoplay">
+                                <source src="{% static "Music/PersonalSiteBGMusic_1.mp3" %}" type="audio/mp3">
+                            </audio>
+
+
+                            <script>
+                                var x1 = document.getElementById("1");
+
+                                function playAudio_1() {
+                                    x1.play();
+                                }
+
+                                function pauseAudio_1() {
+                                    x1.pause();
+                                }
+                            </script>
+
+
+
+                            <br>
+                            <br>
+
+
                             {#                                <li><img onclick="playAudio_2()" src="{% static "img/root/Play_2.png" %}" style="" alt="">#}
                             {#                                </li>#}
                             {#                                <li><img onclick="playAudio_3()" src="{% static "img/root/Play_3.png" %}" style="" alt="">#}
@@ -869,86 +878,86 @@
         </div>
 
 
-{#        <!--templates-->#}
-{#        <!--Section-->#}
-{#        <div class="vlt-section pp-scrollable" data-anchor="templates">#}
-{#            <div class="vlt-section__vertical-align">#}
-{#                <div class="vlt-section__content">#}
-{#                    <div class="container">#}
-{##}
-{#                        <!--Animated Block-->#}
-{#                        <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
-{#                             style="animation-delay:0s; animation-duration:700ms;">#}
-{#                            <h3>قالب ها</h3>#}
-{#                            <p>برای پیاده سازی بک اند قالب دلخواه خود ، اسم قالب را در قسمت "ارتباط" ارسال کنید.</p>#}
-{#                        </div>#}
-{#                        <div class="vlt-gap-100"></div>#}
-{#                        <div class="row">#}
-{#                            <div class="col-xl-4">#}
-{##}
-{##}
-{#                                <!--Animated Block-->#}
-{#                                {% for new in news %}#}
-{#                                    <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
-{#                                         style="animation-delay:.1s; animation-duration:700ms;">#}
-{#                                        <!--News Item-->#}
-{#                                        <article class="vlt-post vlt-post--masonry">#}
-{#                                            <div class="vlt-post-border"><span class="top"></span><span#}
-{#                                                    class="right"></span><span class="bottom"></span><span#}
-{#                                                    class="left"></span></div>#}
-{#                                            <div class="vlt-post-media"><img src="{{ new.image.url }}"#}
-{#                                                                             alt="{{ new.title }}"#}
-{#                                                                             loading="lazy"></div>#}
-{#                                            <div class="vlt-post-content">#}
-{#                                                <header class="vlt-post-header"><span></span>#}
-{#                                                                                                            class="vlt-post-date">25شهریور99</span>#}
-{#                                                    <h3 class="vlt-post-title"><a#}
-{#                                                            href=#>{{ new.title }}</a></h3>#}
-{#                                                </header>#}
-{#                                                <div class="vlt-post-excerpt">#}
-{#                                                    <p>{{ new.preview_body }}</p>#}
-{#                                                </div>#}
-{#                                                <footer class="vlt-post-footer"><a class="vlt-read-more-link"#}
-{#                                                                                   href="single-new/{{ new.id }}">ادامه#}
-{#                                                    مطلب</a>#}
-{#                                                </footer>#}
-{#                                            </div>#}
-{#                                        </article>#}
-{#                                        <br>#}
-{#                                    </div>#}
-{#                                    </div>#}
-{#                                    <div class="col-xl-4">#}
-{#                                    <div class="vlt-gap-30--lg"></div>#}
-{#                                    <!--Animated Block-->#}
-{#                                    <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
-{#                                         style="animation-delay:.4s; animation-duration:700ms;">#}
-{#                                        <!--templatestemplates Item-->#}
-{#                                    </div>#}
-{#                                {% endfor %}#}
-{##}
-{#                                </div>#}
-{#                            <br>#}
-{#                            <div style="text-align: center">#}
-{#                                {% if news.has_other_pages %}#}
-{#                                    {% if news.has_previous %}#}
-{#                                        <a href="?page={{ news.previous_page_number }}#templates"><img#}
-{#                                                src="{% static "img/root/go_right.png" %}" width="58px"#}
-{#                                                height="58px"#}
-{#                                                alt=""></a>#}
-{#                                    {% endif %}#}
-{#                                    {% if news.has_next %}#}
-{#                                        <a href="?page={{ news.next_page_number }}#templates"><img#}
-{#                                                src="{% static "img/root/go_left.png" %}" width="58px"#}
-{#                                                height="58px"#}
-{#                                                alt=""></a>#}
-{#                                    {% endif %}#}
-{#                                {% endif %}#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+        {#        <!--templates-->#}
+        {#        <!--Section-->#}
+        {#        <div class="vlt-section pp-scrollable" data-anchor="templates">#}
+        {#            <div class="vlt-section__vertical-align">#}
+        {#                <div class="vlt-section__content">#}
+        {#                    <div class="container">#}
+        {##}
+        {#                        <!--Animated Block-->#}
+        {#                        <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
+        {#                             style="animation-delay:0s; animation-duration:700ms;">#}
+        {#                            <h3>قالب ها</h3>#}
+        {#                            <p>برای پیاده سازی بک اند قالب دلخواه خود ، اسم قالب را در قسمت "ارتباط" ارسال کنید.</p>#}
+        {#                        </div>#}
+        {#                        <div class="vlt-gap-100"></div>#}
+        {#                        <div class="row">#}
+        {#                            <div class="col-xl-4">#}
+        {##}
+        {##}
+        {#                                <!--Animated Block-->#}
+        {#                                {% for new in news %}#}
+        {#                                    <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
+        {#                                         style="animation-delay:.1s; animation-duration:700ms;">#}
+        {#                                        <!--News Item-->#}
+        {#                                        <article class="vlt-post vlt-post--masonry">#}
+        {#                                            <div class="vlt-post-border"><span class="top"></span><span#}
+        {#                                                    class="right"></span><span class="bottom"></span><span#}
+        {#                                                    class="left"></span></div>#}
+        {#                                            <div class="vlt-post-media"><img src="{{ new.image.url }}"#}
+        {#                                                                             alt="{{ new.title }}"#}
+        {#                                                                             loading="lazy"></div>#}
+        {#                                            <div class="vlt-post-content">#}
+        {#                                                <header class="vlt-post-header"><span></span>#}
+        {#                                                                                                            class="vlt-post-date">25شهریور99</span>#}
+        {#                                                    <h3 class="vlt-post-title"><a#}
+        {#                                                            href=#>{{ new.title }}</a></h3>#}
+        {#                                                </header>#}
+        {#                                                <div class="vlt-post-excerpt">#}
+        {#                                                    <p>{{ new.preview_body }}</p>#}
+        {#                                                </div>#}
+        {#                                                <footer class="vlt-post-footer"><a class="vlt-read-more-link"#}
+        {#                                                                                   href="single-new/{{ new.id }}">ادامه#}
+        {#                                                    مطلب</a>#}
+        {#                                                </footer>#}
+        {#                                            </div>#}
+        {#                                        </article>#}
+        {#                                        <br>#}
+        {#                                    </div>#}
+        {#                                    </div>#}
+        {#                                    <div class="col-xl-4">#}
+        {#                                    <div class="vlt-gap-30--lg"></div>#}
+        {#                                    <!--Animated Block-->#}
+        {#                                    <div class="vlt-animated-block" data-animation-name="fadeInUpSm"#}
+        {#                                         style="animation-delay:.4s; animation-duration:700ms;">#}
+        {#                                        <!--templatestemplates Item-->#}
+        {#                                    </div>#}
+        {#                                {% endfor %}#}
+        {##}
+        {#                                </div>#}
+        {#                            <br>#}
+        {#                            <div style="text-align: center">#}
+        {#                                {% if news.has_other_pages %}#}
+        {#                                    {% if news.has_previous %}#}
+        {#                                        <a href="?page={{ news.previous_page_number }}#templates"><img#}
+        {#                                                src="{% static "img/root/go_right.png" %}" width="58px"#}
+        {#                                                height="58px"#}
+        {#                                                alt=""></a>#}
+        {#                                    {% endif %}#}
+        {#                                    {% if news.has_next %}#}
+        {#                                        <a href="?page={{ news.next_page_number }}#templates"><img#}
+        {#                                                src="{% static "img/root/go_left.png" %}" width="58px"#}
+        {#                                                height="58px"#}
+        {#                                                alt=""></a>#}
+        {#                                    {% endif %}#}
+        {#                                {% endif %}#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
         <!--Contact-->
         <!--Section-->
         <div class="vlt-section pp-scrollable" data-anchor="Contact">

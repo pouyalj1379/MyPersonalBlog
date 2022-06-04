@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--Favicon-->
-{#    <link rel="icon" type="image/svg" href="{% static "img/root/favicon.svg" %}">#}
+    {#    <link rel="icon" type="image/svg" href="{% static "img/root/favicon.svg" %}">#}
     <!--Framework-->
     <link rel="stylesheet" href="{% static "css/framework/bootstrap.min.css" %}">
     <!--Framework RTL-->
@@ -34,10 +34,10 @@
     <div class="vlt-navbar vlt-navbar--main vlt-navbar--transparent vlt-navbar--sticky">
         <div class="vlt-navbar-background"></div>
         <div class="vlt-navbar-inner">
-{#            <div class="vlt-navbar-inner--left">#}
-{#                <!--Logo--><a class="vlt-navbar-logo" href="/"><img src="{% static "img/root/favicon.svg" %}"#}
-{#                                                                    alt="Pouyalj"></a>#}
-{#            </div>#}
+            {#            <div class="vlt-navbar-inner--left">#}
+            {#                <!--Logo--><a class="vlt-navbar-logo" href="/"><img src="{% static "img/root/favicon.svg" %}"#}
+            {#                                                                    alt="Pouyalj"></a>#}
+            {#            </div>#}
             <div class="vlt-navbar-inner--center">
                 <div class="container">
                     <nav class="vlt-default-menu__navigation">
@@ -50,7 +50,7 @@
                             {#                            <li data-menuanchor="Education"><a href="/#Education">تحصیلات</a></li>#}
                             <li data-menuanchor="Poems"><a href="/#Poems">اشعار</a></li>
                             <li data-menuanchor="Hobbies"><a href="/#Hobbies">علاقه مندی ها</a></li>
-{#                            <li data-menuanchor="templates"><a href="/#templates">قالب ها</a></li>#}
+                            {#                            <li data-menuanchor="templates"><a href="/#templates">قالب ها</a></li>#}
                             <li data-menuanchor="Contact"><a href="/#Contact">ارتباط</a></li>
                         </ul>
                     </nav>
@@ -97,7 +97,7 @@
             {#            <li data-menuanchor="Education"><a href="/#Education">تحصیلات</a></li>#}
             <li data-menuanchor="Poems"><a href="/#Poems">اشعار</a></li>
             <li data-menuanchor="Hobbies"><a href="/#Hobbies">علاقه مندی ها</a></li>
-{#            <li data-menuanchor="templates"><a href="/#templates">قالب ها</a></li>#}
+            {#            <li data-menuanchor="templates"><a href="/#templates">قالب ها</a></li>#}
             <li data-menuanchor="Contact"><a href="/#Contact">ارتباط</a></li>
         </ul>
     </nav>
@@ -147,6 +147,30 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <!--Animated Block-->
+
+                    <img onclick="playAudio_1()" src="{% static "img/root/Play_1.png" %}" alt="1">
+                    <img onclick="pauseAudio_1()" src="{% static "img/root/Pause_1.png" %}" alt="2">
+
+                    <audio id="1" controls>
+                        <source src="{% static "Music/PersonalSiteBGMusic_1.mp3" %}" type="audio/mp3">
+                    </audio>
+
+                    <script>
+                        var x1 = document.getElementById("1");
+
+                        function playAudio_1() {
+                            x1.play();
+                        }
+
+                        function pauseAudio_1() {
+                            x1.pause();
+                        }
+                    </script>
+
+                    <br>
+                    <br>
+                    <br>
+
                     <div class="vlt-animated-block" data-animation-name="fadeInUpSm"
                          style="animation-delay:0s; animation-duration:700ms;">
                         <h3>{{ tail.title }}</h3>
